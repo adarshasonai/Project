@@ -21,7 +21,6 @@ import com.sun.tools.sjavac.Log;
 
 import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;
-
 /**
  * LoanManagementService implementation
  */

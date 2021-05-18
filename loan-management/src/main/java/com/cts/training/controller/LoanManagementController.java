@@ -98,21 +98,20 @@ public class LoanManagementController {
 			return new ResponseEntity<>("Invalid token", HttpStatus.FORBIDDEN);
 		}
 	}
-	
-	
-	
-	
-	//PROJECT STARTING HERE ***********************************************************************************************
-	
+
+	// PROJECT STARTING HERE
+	// ***********************************************************************************************
+
 	@GetMapping(value = "/getLoanApplicationStatus/{application_id}")
-	public CustomerLoan getLoanApplicationStatus(@RequestHeader(name = "Authorization") String token, @PathVariable int loanId,
-			@PathVariable int application_id) throws CustomerLoanNotFoundException {  //CHANGE THE EXCEPTION
-		System.out.println("===============inside getloandetails================");
+	public CustomerLoan getLoanApplicationStatus(@RequestHeader(name = "Authorization") String token,
+			@PathVariable int application_id) throws CustomerLoanNotFoundException { // CHANGE THE EXCEPTION
+		System.out.println("===============inside getLoanApplicationStatus================");
 		if (authClient.validate(token)) {
 			return loanService.getLoanApplicationStatus(application_id);
 		} else {
-			throw new CustomerLoanNotFoundException("Customer Loan Found With LoanId:" + " But Not Found With CustomerId:");
+			throw new CustomerLoanNotFoundException(
+					"Customer Loan Found With LoanId:" + " But Not Found With CustomerId:");
 		}
 	}
-	
+
 }

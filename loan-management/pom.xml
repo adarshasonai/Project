@@ -103,6 +103,23 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+
+<!-- TO CONNECT TO MYSQL  -->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+
+
+
+
+
+<!-- TO CONNECT TO MYSQL  -->
+
+
 	</dependencies>
 
 	<build>
